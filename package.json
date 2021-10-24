@@ -1,0 +1,49 @@
+{
+  "name": "gha-gcs_deploy-example",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "prebuild": "rimraf build",
+    "build": "webpack --progress --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimizu/gha-gcs_deploy-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shimizu/gha-gcs_deploy-example/issues"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@loaders.gl/csv": "^3.0.12",
+    "@mui/icons-material": "^5.0.4",
+    "@mui/material": "^5.0.4",
+    "css-loader": "^6.4.0",
+    "d3-color": "^3.0.1",
+    "d3-fetch": "^3.0.1",
+    "deck.gl": "^8.6.0",
+    "dotenv-webpack": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-map-gl": "^6.1.17",
+    "style-loader": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "html-webpack-plugin": "^5.3.2",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
