@@ -4,8 +4,8 @@
 ## インストール
 
 ```
-> git clone git@github.com:sustainacraft/forest_mapper_viz.git
-> cd forest_mapper_viz
+> git clone git@github.com:shimizu/deckgl-minimum-template.git
+> cd deckgl-minimum-template
 > npm install
 ```
 
