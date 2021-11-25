@@ -1,6 +1,6 @@
 {
-  "name": "gha-gcs_deploy-example",
-  "version": "1.0.3",
+  "name": "deck.gl-minimum-template",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {

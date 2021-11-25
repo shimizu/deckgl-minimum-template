@@ -1,4 +1,4 @@
-# Forest Mapper Viz
+# deckgl minimum template
 
 
 ## インストール
