@@ -2,14 +2,12 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
-import Map from "./components/Map";
+import Map from "./Components/Map";
 
 import "./App.css";
 
 
-
 function App() {
-
     return (
         <Map ></Map>
     );
