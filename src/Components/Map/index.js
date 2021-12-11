@@ -1,4 +1,4 @@
-import React, {useState,  useEffect, createContext } from 'react';
+import React, {useState,  useEffect } from 'react';
 import DeckGL from '@deck.gl/react';
 import { StaticMap } from 'react-map-gl';
 
@@ -17,8 +17,6 @@ const INITIAL_VIEW_STATE = {
     zoom: 12
 };
 
-
-export const CtxLayerStatus = createContext();
 
 function Map() {
     const [viwState, setViewState] = useState(INITIAL_VIEW_STATE)
