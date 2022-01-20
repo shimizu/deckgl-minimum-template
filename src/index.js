@@ -10,10 +10,10 @@ const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 
 // 初期ビューポートの設定
 const INITIAL_VIEW_STATE = {
-    bearing: 25.165048543689323,
     latitude: 35.73202612464274,
     longitude: 137.53268402693763,
-    pitch: 54.083529814863375,
+    bearing: 0,
+    pitch: 0,
     zoom: 12
 };
 

@@ -2,10 +2,7 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
-import Map from "./Components/Map";
-
-import "./App.css";
-
+import Map from "./index.js";
 
 function App() {
     return (
