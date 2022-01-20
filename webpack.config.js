@@ -11,7 +11,7 @@ module.exports = {
         maxAssetSize: 1500000,
     },
     entry: {
-        'js/app': ['./src/App.js'],
+        'js/app': ['./src/index.js'],
     },
     output: {
         path: path.resolve(__dirname, 'build/'),
