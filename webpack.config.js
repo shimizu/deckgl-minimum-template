@@ -11,7 +11,7 @@ module.exports = {
         maxAssetSize: 1500000,
     },
     entry: {
-        'js/app': ['@babel/polyfill', './src/index.js'],
+        'js/app': ['./src/index.js'],
     },
     output: {
         path: path.resolve(__dirname, 'build/'),
