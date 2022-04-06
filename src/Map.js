@@ -1,12 +1,7 @@
 import React, {useState,  useEffect } from 'react';
 import DeckGL from 'deck.gl';
-import { StaticMap } from 'react-map-gl';
 
 import { renderLayers } from "./RenderLayers";
-
-
-// 背景マップに使用するMapboxのトークン設定
-const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 
 // 初期ビューポートの設定
 const INITIAL_VIEW_STATE = {
@@ -14,12 +9,8 @@ const INITIAL_VIEW_STATE = {
     longitude: 137.53268402693763,
     bearing: 0,
     pitch: 0,
-    zoom: 12
+    zoom: 4
 };
-
-
-
-
 
 
 function Map() {
@@ -33,11 +24,16 @@ function Map() {
                 controller={true}
                 layers={renderLayers({})}
             >
-                <StaticMap
-                    mapStyle="mapbox://styles/mapbox/satellite-v9"
-                    mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
-                />
             </DeckGL>
+            <div className="attribution">
+                <a
+                    href="http://www.openstreetmap.org/about/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    © OpenStreetMap
+                </a>
+            </div>
         </div>
     );
 }
