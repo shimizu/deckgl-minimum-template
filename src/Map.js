@@ -1,5 +1,5 @@
 import React, {useState,  useEffect } from 'react';
-import DeckGL from '@deck.gl/react';
+import DeckGL from 'deck.gl';
 import { StaticMap } from 'react-map-gl';
 
 import { renderLayers } from "./RenderLayers";
@@ -16,6 +16,10 @@ const INITIAL_VIEW_STATE = {
     pitch: 0,
     zoom: 12
 };
+
+
+
+
 
 
 function Map() {
