@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 
 import Map from "./Map.js";
 
-import "./styles.css";
+import "./css/styles.scss";
 
 function App() {
     return (

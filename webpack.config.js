@@ -3,6 +3,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+
+
+
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -30,14 +35,13 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.css$/i,
+                test: /\.s[ac]ss$/i,
                 use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: { url: false }
-                    }
-                ],
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
+
             }
         ],
     },
@@ -46,6 +50,10 @@ module.exports = {
             template: './public/index.html',
             filename: 'index.html',
         }),
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
+        }),
+        new RemoveEmptyScriptsPlugin(),
         new CopyPlugin({
             patterns: [
                 {
