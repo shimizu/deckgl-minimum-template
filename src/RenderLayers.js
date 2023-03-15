@@ -1,12 +1,12 @@
 import { TileLayer, BitmapLayer, GeoJsonLayer } from 'deck.gl';
 
 
-export function renderLayers(props) {
+export function renderLayers({data}) {
  
   //都道府県GeoJSONを読み込んで表示
   const prefLayer = new GeoJsonLayer({
     id: 'geojson-layer',
-    data: "./data/pref.geojson",
+    data: data,
     stroked: true,
     filled: true,
     lineWidthScale: 20,
