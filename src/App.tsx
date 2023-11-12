@@ -5,9 +5,6 @@ import DeckGL from '@deck.gl/react/typed'
 
 import { renderLayers } from './Layers';
 
-import './App.css'
-
-
 const INITIAL_VIEW_STATE = {
   latitude: 35.73202612464274,
   longitude: 137.53268402693763,
