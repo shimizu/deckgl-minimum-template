@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { MapView } from '@deck.gl/core/typed';
 import DeckGL from '@deck.gl/react/typed'
 
 
@@ -18,8 +19,8 @@ const INITIAL_VIEW_STATE = {
 
 
 function App() {
-  const [data, setData] = useState(null);
-  const [viwState, setViewState] = useState(INITIAL_VIEW_STATE);
+  const [data, setData] = useState(undefined);
+  const [viwState] = useState(INITIAL_VIEW_STATE);
 
 
   //GeoJSONデータの読み込み
@@ -37,6 +38,7 @@ function App() {
   return (
     <>
       <DeckGL
+        views={new MapView({ repeat :true})}
         initialViewState={viwState}
         controller={true}
         layers={renderLayers({ data })}

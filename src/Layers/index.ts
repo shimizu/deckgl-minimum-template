@@ -1,7 +1,12 @@
 import { BitmapLayer, GeoJsonLayer } from '@deck.gl/layers/typed';
 import { TileLayer } from '@deck.gl/geo-layers/typed';
+import { GeoJsonGeometryTypes } from 'geojson';
 
-export function renderLayers({ data }) {
+interface Props {
+    data: GeoJsonGeometryTypes | undefined
+}
+
+export function renderLayers({ data }: Props) {
 
     //都道府県GeoJSONを読み込んで表示
     const prefLayer = new GeoJsonLayer({
@@ -25,13 +30,14 @@ export function renderLayers({ data }) {
         maxZoom: 19,
         tileSize: 256,
 
-        renderSubLayers: (props) => {
+        renderSubLayers: (props:any) => {
             const {
-                bbox: { west, south, east, north }
+                //type error: Property 'east' does not exist on type 'TileBoundingBox'.
+                bbox: { west, south, east, north } 
             } = props.tile;
 
             return new BitmapLayer(props, {
-                data: null,
+                data: undefined, 
                 image: props.data,
                 bounds: [west, south, east, north]
             });
