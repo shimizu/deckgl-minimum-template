@@ -37,7 +37,8 @@ export function renderLayers({ data }: Props) {
             } = props.tile;
 
             return new BitmapLayer(props, {
-                data: undefined, 
+                //@ts-ignore
+                data:undefined, 
                 image: props.data,
                 bounds: [west, south, east, north]
             });
