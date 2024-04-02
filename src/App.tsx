@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { MapView } from '@deck.gl/core/typed';
-import DeckGL from '@deck.gl/react/typed'
+import { MapView } from '@deck.gl/core';
+import DeckGL from '@deck.gl/react'
 
 
 import { renderLayers } from './Layers';

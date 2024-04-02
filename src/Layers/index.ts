@@ -1,5 +1,5 @@
-import { BitmapLayer, GeoJsonLayer } from '@deck.gl/layers/typed';
-import { TileLayer } from '@deck.gl/geo-layers/typed';
+import { BitmapLayer, GeoJsonLayer } from '@deck.gl/layers';
+import { TileLayer } from '@deck.gl/geo-layers';
 import { GeoJsonGeometryTypes } from 'geojson';
 
 interface Props {
