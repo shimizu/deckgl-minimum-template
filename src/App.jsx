@@ -4,7 +4,7 @@ import DeckGL from '@deck.gl/react';
 
 import { renderLayers } from './Layers'
 
-
+import "./index.css";
 
 // 初期ビューポートの設定
 const INITIAL_VIEW_STATE = {
