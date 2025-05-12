@@ -4,13 +4,12 @@ import wasm from "vite-plugin-wasm";
 
 
 
+//https://react.dev/learn/react-compiler
 const ReactCompilerConfig = {
-  // 特定のディレクトリのみを対象にする設定
-  // sources: (filename: string) => {
-  //   return filename.indexOf("src/path/to/dir") !== -1;
-  // },
+  target:'19' //react 19
+  
   // 「opt-in」モードにする設定
-   compilationMode: "annotation",
+  //compilationMode: "annotation",
 };
 
 
