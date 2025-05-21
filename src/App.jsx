@@ -16,13 +16,13 @@ const INITIAL_VIEW_STATE = {
 };
 
 function App() {
-  const [viwState, setViewState] = useState(INITIAL_VIEW_STATE)
+  const [viewState, setViewState] = useState(INITIAL_VIEW_STATE)
 
 
   return (
     <div>
       <DeckGL
-        initialViewState={viwState}
+        initialViewState={viewState}
         controller={true}
         layers={renderLayers({})}
       >
