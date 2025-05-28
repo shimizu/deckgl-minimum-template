@@ -6,6 +6,10 @@ import { renderLayers } from './Layers'
 
 import "./index.css";
 
+//const GoogleMapsKeys = console.log(process.env) 
+
+console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY) 
+
 // 初期ビューポートの設定
 const INITIAL_VIEW_STATE = {
   latitude: 35.73202612464274,
