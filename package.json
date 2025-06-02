@@ -10,21 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@loaders.gl/core": "^4.2.3",
+    "@loaders.gl/core": "^4.3.3",
     "@vis.gl/react-google-maps": "^1.5.2",
-    "deck.gl": "^9.0.28",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "vite-plugin-wasm": "^3.3.0"
+    "deck.gl": "^9.1.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "vite-plugin-wasm": "^3.4.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.3",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "vite": "^5.3.4"
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "vite": "^6.3.5"
   }
 }

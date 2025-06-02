@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import DeckGL from '@deck.gl/react';
-
+import {APIProvider, Map, limitTiltRange} from '@vis.gl/react-google-maps';
 
 import { renderLayers } from './Layers'
 
 import "./index.css";
 
-//const GoogleMapsKeys = console.log(process.env) 
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
 
 console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY) 
 
@@ -20,26 +20,20 @@ const INITIAL_VIEW_STATE = {
 };
 
 function App() {
-  const [viewState, setViewState] = useState(INITIAL_VIEW_STATE)
-
 
   return (
     <div>
+    <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
       <DeckGL
-        initialViewState={viewState}
+        initialViewState={INITIAL_VIEW_STATE}
+        layers={renderLayers()}
         controller={true}
-        layers={renderLayers({})}
-      >
+        onViewStateChange={limitTiltRange}>
+        <Map  
+          disableDefaultUI={false}
+        />
       </DeckGL>
-      <div className="attribution">
-        <a
-          href="http://www.openstreetmap.org/about/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          © OpenStreetMap
-        </a>
-      </div>
+    </APIProvider>
     </div>
   );
 }
