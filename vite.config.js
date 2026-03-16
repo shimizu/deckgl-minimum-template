@@ -15,11 +15,20 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          react: ['react', 'react-dom'],
-          deckgl_core: ['@deck.gl/core'],
-          deckgl_react: ['@deck.gl/react'],
-        }
+        codeSplitting: {
+          groups: [
+            {
+              name: 'react',
+              test: /node_modules[\\/]react/,
+              priority: 20,
+            },
+            {
+              name: 'deckgl',
+              test: /node_modules[\\/]@deck\.gl/,
+              priority: 10,
+            },
+          ],
+        },
       }
     }
   }
