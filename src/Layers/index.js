@@ -1,7 +1,7 @@
 import { BitmapLayer } from '@deck.gl/layers';
 import { TileLayer } from '@deck.gl/geo-layers';
 
-export function renderLayers(props) {
+export function renderLayers() {
 
     //OSMタイルを読み込みベースマップとして表示
     const tileLayer = new TileLayer({
