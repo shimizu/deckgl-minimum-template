@@ -9,6 +9,9 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "overrides": {
+    "fflate": "0.7.5"
+  },
   "dependencies": {
     "@loaders.gl/core": "^4.4.3",
     "deck.gl": "^9.3.4",
