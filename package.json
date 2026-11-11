@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "overrides": {
-    "fflate": "0.7.5"
+    "fflate": "0.7.5",
+    "minimatch": "^11.0.1"
   },
   "dependencies": {
     "@loaders.gl/core": "^4.5.4",
